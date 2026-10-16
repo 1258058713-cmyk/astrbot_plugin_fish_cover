@@ -1,0 +1,62 @@
+{
+  "fish_api_key": {
+    "description": "Fish Audio API Key",
+    "type": "string",
+    "hint": "在 fish.audio 官网获取的 API 密钥，用于音色转换/翻唱",
+    "default": ""
+  },
+  "fish_reference_id": {
+    "description": "Fish Audio 参考音色 ID",
+    "type": "string",
+    "hint": "需要翻唱成的目标音色 ID，可以在 Fish Audio 的音色库中获取",
+    "default": ""
+  },
+  "qq_music_cookie": {
+    "description": "QQ 音乐 Cookie",
+    "type": "string",
+    "hint": "部分歌曲需要登录才能下载，从浏览器 F12 或 QQ 音乐网页版获取 Cookie",
+    "default": ""
+  },
+  "demucs_model": {
+    "description": "Demucs 分离模型",
+    "type": "string",
+    "hint": "人声分离使用的模型，推荐 htdemucs，可选 htdemucs_ft / mdx_extra",
+    "default": "htdemucs"
+  },
+  "max_duration": {
+    "description": "最大处理时长（秒）",
+    "type": "int",
+    "hint": "超过这个长度的歌曲将被拒绝处理，防止服务器卡死",
+    "default": 300
+  },
+  "cover_volume": {
+    "description": "翻唱人声音量",
+    "type": "float",
+    "hint": "混音时翻唱人声的音量倍数，1.0 为原始音量",
+    "default": 1.0
+  },
+  "accompaniment_volume": {
+    "description": "伴奏音量",
+    "type": "float",
+    "hint": "混音时伴奏的音量倍数，1.0 为原始音量",
+    "default": 1.0
+  },
+  "output_format": {
+    "description": "输出音频格式",
+    "type": "string",
+    "hint": "最终输出的音频格式，推荐 wav，兼容性最好",
+    "default": "wav"
+  },
+  "temp_dir": {
+    "description": "临时文件目录",
+    "type": "string",
+    "hint": "存放下载歌曲和中间产物的临时目录，留空则使用系统默认临时目录",
+    "default": ""
+  },
+  "daily_limit": {
+    "description": "每人每天翻唱次数上限",
+    "type": "int",
+    "hint": "0 表示不限制，默认 5 次",
+    "default": 5
+  }
+}

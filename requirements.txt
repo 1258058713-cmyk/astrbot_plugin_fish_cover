@@ -1,0 +1,27 @@
+# ===== 核心依赖 =====
+
+# ONNX Runtime：运行 UVR5 的 MDX 模型进行人声分离，替代 PyTorch
+onnxruntime
+
+# 数值计算：处理音频矩阵运算
+numpy
+
+# 音频读写：读写 wav/flac/mp3 等格式，分离和混音都要用
+soundfile
+
+# 音频解码/重采样/格式转换（比 soundfile 更强大的编解码支持）
+librosa
+
+# HTTP 请求：调用 Fish Audio API、下载 QQ 音乐音频文件
+requests
+
+# QQ 音乐搜索与链接获取
+qqmusic-api-python
+
+# ===== 可选辅助 =====
+
+# 音频格式转换（如果 librosa 不够用，可以用这个处理 MP3 等格式）
+pydub
+
+# 进度条显示（处理大文件时给用户一些反馈，可选）
+tqdm
